@@ -45,10 +45,10 @@ $(document).ready(function(){
               $.get("/find_person_info_json", function(data, status){
                   $(".mynav").removeClass("active");
                   var personinfo = eval(data);
-                  var personinfoDiv = '<div class="alert alert-info" role="alert">id: ' + personinfo[0] +  "</div>";
-                  personinfoDiv += '<div class="alert alert-info" role="alert">name: ' + personinfo[1] +  "</div>";
-                  personinfoDiv += '<div class="alert alert-info" role="alert">gender: ' + personinfo[2] +  "</div>";
-                  personinfoDiv += '<div class="alert alert-info" role="alert">location: ' + personinfo[3] +  "</div>";
+                  var personinfoDiv = '<div class="alert alert-info" role="alert">教师ID: ' + personinfo[0] +  "</div>";
+                  personinfoDiv += '<div class="alert alert-info" role="alert">姓名: ' + personinfo[1] +  "</div>";
+                  personinfoDiv += '<div class="alert alert-info" role="alert">性别: ' + personinfo[2] +  "</div>";
+                  personinfoDiv += '<div class="alert alert-info" role="alert">籍贯: ' + personinfo[3] +  "</div>";
                   $("#mycontent").html(personinfoDiv);
                   $("#personinfo").addClass("active");
                   $("#choosedstudent").html("");
